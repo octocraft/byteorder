@@ -1,0 +1,11 @@
+version: 1.0.{build}
+image:
+- Ubuntu
+- macOS
+- Visual Studio 2022
+build_script:
+- cmd: scripts\cmd\make.bat
+- sh: chmod u+x scripts/sh/make.sh && ./scripts/sh/make.sh
+test_script:
+- cmd: scripts\cmd\test.bat
+- sh: chmod u+x scripts/sh/test.sh && ./scripts/sh/test.sh
